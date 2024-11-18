@@ -44,3 +44,4 @@
 /Users/thomaswei/Desktop/thomas/Project/VotingSysApi/obj/Release/net8.0/VotingSysApi.pdb
 /Users/thomaswei/Desktop/thomas/Project/VotingSysApi/obj/Release/net8.0/VotingSysApi.genruntimeconfig.cache
 /Users/thomaswei/Desktop/thomas/Project/VotingSysApi/obj/Release/net8.0/ref/VotingSysApi.dll
+/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/obj/Release/net8.0/VotingSysApi.sourcelink.json

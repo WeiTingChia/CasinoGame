@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p462PGoN2lIZrY4L293Te7jP31XBcrWud74iMYCuAG8=",
+  "Hash": "mSgfUiht63eLG2gHoWI2139UuxIRfbcSc2RlBZE7suc=",
   "Source": "VotingSysApi",
   "BasePath": "_content/VotingSysApi",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-B2Z12vRF.js",
+      "SourceId": "VotingSysApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/",
+      "BasePath": "_content/VotingSysApi",
+      "RelativePath": "assets/index-B2Z12vRF.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/index-B2Z12vRF.js"
+    },
     {
       "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-B6h3A5ub.css",
       "SourceId": "VotingSysApi",
@@ -34,25 +53,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/index-B6h3A5ub.css"
-    },
-    {
-      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-BSwgipq2.js",
-      "SourceId": "VotingSysApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/",
-      "BasePath": "_content/VotingSysApi",
-      "RelativePath": "assets/index-BSwgipq2.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/index-BSwgipq2.js"
     },
     {
       "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/index.html",

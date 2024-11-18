@@ -1,0 +1,5 @@
+{
+  "appService.preDeployTask": "publish-release",
+  "appService.deploySubpath": "bin/Release/net8.0/publish",
+  "appService.defaultWebAppToDeploy": "/subscriptions/17f193bd-56c3-4aa8-8a98-9d41cb2665c2/resourceGroups/testXSpace-dev_group/providers/Microsoft.Web/sites/testXSpace-dev"
+}

@@ -38,4 +38,21 @@ public class UserController : ControllerBase
     db.UpsertRecord("Games", new ObjectId(id), game);
     return Ok();
   }
+
+  [HttpPost]
+  public object UpdateGame(UpdateGameParam gameParam)
+  {
+    var db = new MongoCRUD("VotingSys");
+    var gameModel = db.LoadRecordByName<GameModel>("Games", gameParam.GameName);
+    var answer = new PersonalResult() { UserName = gameParam.UserName, Result = gameParam.UserAnswer };
+    List<PersonalResult> originalResult = gameModel.Result;
+    gameModel.Result = originalResult.Append(answer).ToList();
+    db.UpsertRecord("Games", gameModel.Id, gameModel);
+
+    return new
+    {
+      code = "0000",
+      data = "ok"
+    };
+  }
 }

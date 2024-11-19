@@ -30,3 +30,9 @@ public class AddGameParam
   public string Loser { get; set; }
   public string Status { get; set; }
 }
+public class UpdateGameParam
+{
+  public string GameName { get; set; }
+  public string UserName { get; set; }
+  public string UserAnswer { get; set; }
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GOY3U/i6Iu/ZSEmzUU+y1qQrpQBVSJQFDcgzIYTbCig=",
+  "Hash": "EZnEVDHeKjVyW+7RUPOxenC305NoQW6FnVENqsr3vL0=",
   "Source": "VotingSysApi",
   "BasePath": "_content/VotingSysApi",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-DwJGZgZW.js",
+      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-Ci8IOi7H.js",
       "SourceId": "VotingSysApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/",
       "BasePath": "_content/VotingSysApi",
-      "RelativePath": "assets/index-DwJGZgZW.js",
+      "RelativePath": "assets/index-Ci8IOi7H.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/index-DwJGZgZW.js"
+      "OriginalItemSpec": "wwwroot/assets/index-Ci8IOi7H.js"
     },
     {
       "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-DwYl9tht.css",

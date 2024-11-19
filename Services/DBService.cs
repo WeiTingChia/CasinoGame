@@ -29,6 +29,12 @@ public class MongoCRUD
     var filter = Builders<T>.Filter.Eq("Id", id);
     return collection.Find(filter).First();
   }
+  public T LoadRecordByName<T>(string table, string name)
+  {
+    var collection = db.GetCollection<T>(table);
+    var filter = Builders<T>.Filter.Eq("Name", name);
+    return collection.Find(filter).First();
+  }
 
   public void UpsertRecord<T>(string table, ObjectId id, T record)
   {

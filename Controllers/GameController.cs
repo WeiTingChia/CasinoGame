@@ -30,12 +30,12 @@ public class UserController : ControllerBase
   }
 
   [HttpPost]
-  public IActionResult UpsertGameToCompleted(string id)
+  public IActionResult UpsertGameToCompleted(string gameName)
   {
     var db = new MongoCRUD("VotingSys");
-    var game = db.LoadRecordById<GameModel>("Games", new ObjectId(id));
+    var game = db.LoadRecordByGameName<GameModel>("Games", gameName);
     game.Status = "Completed";
-    db.UpsertRecord("Games", new ObjectId(id), game);
+    db.UpsertRecordByName("Games", gameName, game);
     return Ok();
   }
 
@@ -43,7 +43,7 @@ public class UserController : ControllerBase
   public object UpdateGame(UpdateGameParam gameParam)
   {
     var db = new MongoCRUD("VotingSys");
-    var gameModel = db.LoadRecordByName<GameModel>("Games", gameParam.GameName);
+    var gameModel = db.LoadRecordByGameName<GameModel>("Games", gameParam.GameName);
     var answer = new PersonalResult() { UserName = gameParam.UserName, Result = gameParam.UserAnswer };
     List<PersonalResult> originalResult = gameModel.Result;
     gameModel.Result = originalResult.Append(answer).ToList();

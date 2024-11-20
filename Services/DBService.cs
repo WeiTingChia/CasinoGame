@@ -32,8 +32,14 @@ public class MongoCRUD
   public T LoadRecordByName<T>(string table, string name)
   {
     var collection = db.GetCollection<T>(table);
+    var filter = Builders<T>.Filter.Eq("FirstName", name);
+    return collection.Find(filter).FirstOrDefault();
+  }
+  public T LoadRecordByGameName<T>(string table, string name)
+  {
+    var collection = db.GetCollection<T>(table);
     var filter = Builders<T>.Filter.Eq("Name", name);
-    return collection.Find(filter).First();
+    return collection.Find(filter).FirstOrDefault();
   }
 
   public void UpsertRecord<T>(string table, ObjectId id, T record)
@@ -41,6 +47,15 @@ public class MongoCRUD
     var collection = db.GetCollection<T>(table);
     var result = collection.ReplaceOne(
       new BsonDocument("_id", id),
+      record,
+      new ReplaceOptions { IsUpsert = true });
+  }
+  public void UpsertRecordByName<T>(string table, string name, T record)
+  {
+    var collection = db.GetCollection<T>(table);
+    var filter = Builders<T>.Filter.Eq("Name", name);
+    var result = collection.ReplaceOne(
+      filter,
       record,
       new ReplaceOptions { IsUpsert = true });
   }

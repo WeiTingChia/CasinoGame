@@ -36,13 +36,33 @@ public class UserController : ControllerBase
       data = users
     };
   }
+  [HttpPost]
+  public object AuthUser(AuthUserParam user)
+  {
+    var db = new MongoCRUD("VotingSys");
+    var userRecord = db.LoadRecordByName<UserModel>("Users", user.FirstName);
+    if (userRecord != null && userRecord.Password == user.Password)
+    {
+      return new
+      {
+        code = "0000",
+        data = "ok"
+      };
+    }
+    return new
+    {
+      code = "0001",
+      data = "User not found or password incorrect"
+    };
+  }
+
 
   [HttpPost]
-  public IActionResult UpsertUser(string id)
+  public IActionResult UpsertUser(string id, string password)
   {
     var db = new MongoCRUD("VotingSys");
     var user = db.LoadRecordById<UserModel>("Users", new ObjectId(id));
-    user.Password = "123456";
+    user.Password = password;
     db.UpsertRecord("Users", new ObjectId(id), user);
     return Ok();
   }

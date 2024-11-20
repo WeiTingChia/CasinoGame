@@ -9,3 +9,9 @@ public class UserModel
   public string LastName { get; set; }
   public string Password { get; set; }
 }
+
+public class AuthUserParam
+{
+  public string FirstName { get; set; }
+  public string Password { get; set; }
+}

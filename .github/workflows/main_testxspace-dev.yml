@@ -53,4 +53,4 @@ jobs:
           app-name: 'testXSpace-dev'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FB75DEF1E0E54B60B9309B1E1A6C0B50 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F9F0D5A87ED94DF58E9E53469408969D }}

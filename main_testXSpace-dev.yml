@@ -1,0 +1,44 @@
+name: .NET Core CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 檢出專案原始碼
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 設定 .NET Core SDK
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.x' # 根據您的專案需求修改版本
+
+      # 還原 NuGet 套件
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # 執行建置
+      - name: Build the project
+        run: dotnet build --no-restore --configuration Release
+
+      # 執行單元測試
+      # - name: Run tests
+      #   run: dotnet test --no-build --verbosity normal --configuration Release
+
+      # 如果需要，也可以將生成的工件上傳
+      # - name: Upload build artifacts
+      #   if: success()
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: build-artifacts
+      #     path: '**/bin/Release/*'

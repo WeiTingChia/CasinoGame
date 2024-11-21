@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jLLEbf1EyysBUG7e++Qr4WLlKMksVYYRKWJOhvwjqqk=",
+  "Hash": "kCZf/9KmOFWCHBgpl5Mnj7EbIXl0U74gdMPKmQY3spA=",
   "Source": "VotingSysApi",
   "BasePath": "_content/VotingSysApi",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-DTz1TeCD.js",
+      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-BZn8IUeg.css",
       "SourceId": "VotingSysApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/",
       "BasePath": "_content/VotingSysApi",
-      "RelativePath": "assets/index-DTz1TeCD.js",
+      "RelativePath": "assets/index-BZn8IUeg.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/index-DTz1TeCD.js"
+      "OriginalItemSpec": "wwwroot/assets/index-BZn8IUeg.css"
     },
     {
-      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-FuGYm7u-.css",
+      "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-C5OqSDUc.js",
       "SourceId": "VotingSysApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/",
       "BasePath": "_content/VotingSysApi",
-      "RelativePath": "assets/index-FuGYm7u-.css",
+      "RelativePath": "assets/index-C5OqSDUc.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/index-FuGYm7u-.css"
+      "OriginalItemSpec": "wwwroot/assets/index-C5OqSDUc.js"
     },
     {
       "Identity": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/index.html",

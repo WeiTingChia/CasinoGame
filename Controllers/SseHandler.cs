@@ -17,11 +17,15 @@ public class SseController : ControllerBase
     while (count < 10)
     {
       await Response.WriteAsync($"data: {count}\n\n");
+      await Response.Body.FlushAsync();
+
       count++;
       await Task.Delay(1000);
     }
 
     await Response.WriteAsync("data: This is the end!\n\n");
-    await Response.CompleteAsync();
+    // await Response.CompleteAsync();
+    await Response.Body.FlushAsync();
+
   }
 }

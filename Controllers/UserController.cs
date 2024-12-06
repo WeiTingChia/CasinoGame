@@ -43,6 +43,10 @@ public class UserController : ControllerBase
     var userRecord = db.LoadRecordByName<UserModel>("Users", user.FirstName);
     if (userRecord != null && userRecord.Password == user.Password)
     {
+      userRecord.LastLogin = DateTime.Now;
+      // if (userRecord.LoginCount == null) userRecord.LoginCount = 1;
+      userRecord.LoginCount += 1;
+      db.UpsertRecord("Users", userRecord.Id, userRecord);
       return new
       {
         code = "0000",

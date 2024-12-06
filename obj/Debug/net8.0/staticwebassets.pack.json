@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-BsVBT0r4.css",
+      "PackagePath": "staticwebassets/assets/index-BsVBT0r4.css"
+    },
+    {
+      "Id": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/assets/index-C8Wa1uEN.js",
+      "PackagePath": "staticwebassets/assets/index-C8Wa1uEN.js"
+    },
+    {
+      "Id": "/Users/thomaswei/Desktop/thomas/Project/VotingSysApi/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.VotingSysApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.VotingSysApi.props",
+      "PackagePath": "build\\VotingSysApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.VotingSysApi.props",
+      "PackagePath": "buildMultiTargeting\\VotingSysApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.VotingSysApi.props",
+      "PackagePath": "buildTransitive\\VotingSysApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

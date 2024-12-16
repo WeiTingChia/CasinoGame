@@ -3,6 +3,9 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 
 using System;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace VotingSysApi.Controllers;
 
@@ -29,7 +32,14 @@ public class UserController : ControllerBase
   {
     string code = "0000";
     var db = new MongoCRUD("VotingSys");
-    var users = db.LoadRecords<UserModel>("Users");
+    var users = db.LoadRecords<UserModel>("Users").Select(u => new
+    {
+      u.Id,
+      u.FirstName,
+      u.LastName,
+      u.LastLogin,
+      u.LoginCount
+    });
     return new
     {
       code,
@@ -37,12 +47,30 @@ public class UserController : ControllerBase
     };
   }
   [HttpPost]
-  public object AuthUser(AuthUserParam user)
+  public async Task<object> AuthUser(AuthUserParam user)
   {
     var db = new MongoCRUD("VotingSys");
     var userRecord = db.LoadRecordByName<UserModel>("Users", user.FirstName);
+
     if (userRecord != null && userRecord.Password == user.Password)
     {
+      var claims = new List<Claim>
+      {
+      new Claim(ClaimTypes.Name, userRecord.FirstName),
+      // new Claim(ClaimTypes.Role, "Admin")
+      };
+
+      var authProperties = new AuthenticationProperties
+      { };
+      var claimsIdentity = new ClaimsIdentity(
+                  claims, CookieAuthenticationDefaults.AuthenticationScheme);
+      var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+      await HttpContext.SignInAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme,
+            claimsPrincipal,
+            authProperties);
+
       userRecord.LastLogin = DateTime.Now;
       // if (userRecord.LoginCount == null) userRecord.LoginCount = 1;
       userRecord.LoginCount += 1;

@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
+[Authorize]
 [Route("[controller]/[action]")]
 public class UserController : ControllerBase
 {
@@ -46,6 +48,10 @@ public class UserController : ControllerBase
     var gameModel = db.LoadRecordByGameName<GameModel>("Games", gameParam.GameName);
     var answer = new PersonalResult() { UserName = gameParam.UserName, Result = gameParam.UserAnswer };
     List<PersonalResult> originalResult = gameModel.Result;
+    if (gameModel.Result.Count == 3)
+    {
+      gameModel.Status = "Completed";
+    }
     gameModel.Result = originalResult.Append(answer).ToList();
     db.UpsertRecord("Games", gameModel.Id, gameModel);
 
